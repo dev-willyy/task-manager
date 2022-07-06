@@ -1,25 +1,8 @@
-/*-----------------------------------*\
-  # style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+/* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Libre+Baskerville:wght@700&family=McLaren&family=Merriweather&family=Merriweather+Sans&family=Montserrat+Alternates&family=Montserrat:wght@300&family=Mulish:wght@400;600;700;900&family=Noto+Serif:wght@400;700&family=Open+Sans:wght@300;400;600;700;800&family=Oswald&family=PT+Serif&family=Poppins:wght@300;400;500;600;700;900&family=Quicksand:wght@400;500;600;700&family=Raleway:wght@200;400;500;600;700;800;900&family=Sacramento&display=swap');
 
 :root {
-
-      /**
-       * colors
-       */
-
+      /* colors */
       --raisin-black-2: hsl(245, 16%, 16%);
       --raisin-black-1: hsl(244, 17%, 19%);
       --majorelle-blue: hsl(245, 67%, 59%);
@@ -33,12 +16,9 @@
       --sapphire: hsl(211, 100%, 35%);
       --white: hsl(0, 0%, 100%);
 
-      /**
-       * typography
-       */
-
-      --ff-quicksand: "Quicksand", sans-serif;
-      --ff-mulish: "Mulish", sans-serif;
+      /* fonts */
+      --ff-poppins: 'Poppins', sans-serif;
+      --ff-jost: 'Jost', sans-serif;
 
       --fs-1: 36px;
       --fs-2: 28px;
@@ -47,33 +27,21 @@
       --fs-5: 16px;
       --fs-6: 15px;
       --fs-7: 14px;
+      --fs-8: 12px;
 
       --fw-500: 500;
       --fw-600: 600;
       --fw-700: 700;
 
-      /**
-       * transition
-       */
-
+      /* transition */
       --transition: 0.25s ease;
 
-      /**
-       * spacing
-       */
-
+      /* spacing */
       --section-padding: 80px;
 
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #RESET
-    \*-----------------------------------*/
-
+/* General Resets */
 *,
 *::before,
 *::after {
@@ -116,7 +84,7 @@ textarea {
 }
 
 html {
-      font-family: var(--ff-quicksand);
+      font-family: var(--ff-poppins);
       scroll-behavior: smooth;
 }
 
@@ -124,14 +92,42 @@ body {
       background: var(--white);
 }
 
+/* 
+   Custom Scroll Bar
+         */
+/* Internet Explorer */
+html {
+      scrollbar-width: normal;
+      scrollbar-color: #98ACF8 #3D2C8D;
+      scroll-behavior: smooth;
+}
+
+/* For chrome and related browsers */
+html::-webkit-scrollbar {
+      width: 1.2vw;
+}
+
+html::-webkit-scrollbar-button {
+      background-color: #98ACF8;
+      padding-block: 0.05vw;
+}
+
+html::-webkit-scrollbar-track {
+      background-color: #98ACF8;
+}
+
+html::-webkit-scrollbar-thumb {
+      background-color: var(--majorelle-blue);
+      border-radius: 0.5vw;
+      border: 0.26vw solid #98ACF8;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+      background-color: #3D2C8D;
+}
 
 
-
-
-/*-----------------------------------*\
-      #REUSED STYLE
-    \*-----------------------------------*/
-
+/* Re-Used Styles */
 .container {
       padding-inline: 15px;
 }
@@ -140,7 +136,7 @@ body {
 .h2,
 .h3 {
       color: var(--independence);
-      font-family: var(--ff-mulish);
+      font-family: var(--ff-jost);
       line-height: 1.2;
 }
 
@@ -194,6 +190,11 @@ body {
       color: var(--majorelle-blue);
 }
 
+.btn-secondary a,
+.btn-secondary a:active {
+      color: var(--majorelle-blue);
+}
+
 .section-title {
       text-align: center;
 }
@@ -205,14 +206,7 @@ body {
       text-align: center;
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #HEADER
-    \*-----------------------------------*/
-
+/* Header Styling */
 .header {
       position: fixed;
       top: 0;
@@ -260,8 +254,8 @@ body {
 .navbar-link,
 .header-action-link {
       color: var(--cool-gray);
-      font-size: var(--fs-6);
-      font-family: var(--ff-mulish);
+      font-size: var(--fs-4);
+      font-family: var(--ff-jost);
       padding-block: 8px;
 }
 
@@ -269,17 +263,10 @@ body {
       color: var(--majorelle-blue);
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #HERO
-    \*-----------------------------------*/
-
+/* Styling for Hero Section */
 .hero {
       padding: 125px 0 var(--section-padding);
-      background: var(--ghost-white-1);
+      background: var(--ghost-white-2);
 }
 
 .hero-content {
@@ -329,14 +316,7 @@ body {
       width: 100%;
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #ABOUT
-    \*-----------------------------------*/
-
+/* About Section Styling */
 .about {
       padding-block: var(--section-padding);
 }
@@ -428,17 +408,10 @@ body {
       color: hsla(0, 0%, 100%, 0.5);
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #FEATURES
-    \*-----------------------------------*/
-
+/* Features Section Styling */
 .features {
       padding-block: var(--section-padding);
-      background: var(--ghost-white-1);
+      background: var(--ghost-white-2);
 }
 
 .features .section-title {
@@ -477,7 +450,7 @@ body {
 
 .features-content-title {
       font-size: var(--fs-2);
-      font-family: var(--ff-mulish);
+      font-family: var(--ff-jost);
       color: var(--independence);
       font-weight: var(--fw-600);
       margin-bottom: 25px;
@@ -528,94 +501,98 @@ body {
       gap: 10px;
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #BLOG
-    \*-----------------------------------*/
-
-.blog {
-      padding-block: var(--section-padding);
+/* Testimonials Section */
+#testimonials {
+      background-color: var(--ghost-white-1);
+      padding-inline: 6.24rem;
 }
 
-.blog .section-title {
-      margin-bottom: 20px;
+.py-4 {
+      padding: 2rem 0;
 }
 
-.blog .section-text {
-      margin-bottom: 40px;
+.flex-container {
+      max-width: 1320px;
+      padding: 0 1rem;
+      margin: 0 auto;
 }
 
-.blog-list {
-      display: grid;
-      gap: 30px;
+.lg-title {
+      font-size: 1.8rem;
+      line-height: 2.4;
 }
 
-.blog-banner {
-      margin-bottom: 20px;
+.sm-title {
+      display: block;
+      font-family: var(--ff-jost);
+      font-weight: 400;
+      font-size: 1.4rem;
+      padding-bottom: .4rem;
+      max-width: 450px;
+      margin-right: auto;
+      margin-left: auto;
+      line-height: 1.1;
 }
 
-.blog-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px;
+.test-item {
+      font-family: var(--ff-jost);
+      font-size: 18px;
+      border: 2px solid var(--light-grey);
+      padding: 2rem 1rem;
+      position: relative;
+      background: var(--majorelle-blue);
+      color: var(--white);
+      opacity: 0.9;
+      border-radius: 0.2rem;
+      margin: 2rem 0 14rem 0;
 }
 
-.blog-meta {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 20px;
-      font-size: var(--fs-6);
-      text-transform: uppercase;
-      color: var(--cool-gray);
-      margin-bottom: 10px;
+.test-item::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid var(--majorelle-blue);
 }
 
-.blog-meta span {
-      display: flex;
-      align-items: center;
-      gap: 5px;
+.test-item-info {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: var(--raisin-black-1);
 }
 
-.blog-title {
-      font-size: var(--fs-3);
+.test-item-info img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      margin: 1rem;
+}
+
+.test-item-info h3 {
+      font-size: 1rem;
+}
+
+.title-wrap {
+      text-align: center;
+      padding: 0.4rem 0;
+      margin-bottom: 0.2rem;
       color: var(--independence);
 }
 
-.blog-text {
-      color: var(--cool-gray);
-      font-size: var(--fs-6);
-      line-height: 1.7;
-      margin-bottom: 15px;
-}
-
-.blog-link-btn {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: var(--majorelle-blue);
-      font-weight: var(--fw-600);
-}
-
-.blog-link-btn:is(:hover, :focus) {
-      color: var(--sapphire);
-}
 
 
-
-
-
-/*-----------------------------------*\
-      #CONTACT
-    \*-----------------------------------*/
-
+/* Contact Section */
 .contact {
       padding-block: var(--section-padding);
-      background: var(--ghost-white-1);
+      background: var(--ghost-white-2);
 }
 
 .contact .section-title {
@@ -703,14 +680,7 @@ textarea.input-field {
       font-style: normal;
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #FOOTER
-    \*-----------------------------------*/
-
+/* Footer Section */
 footer {
       background: var(--raisin-black-1);
       color: var(--white-opacity);
@@ -727,6 +697,10 @@ footer {
 
 footer .logo {
       margin-bottom: 25px;
+}
+
+.page-brand {
+      border-radius: 0.5rem;
 }
 
 .footer-text {
@@ -763,7 +737,7 @@ footer .logo {
 
 .footer-item-title {
       color: var(--white);
-      font-family: var(--ff-mulish);
+      font-family: var(--ff-jost);
       font-weight: var(--fw-700);
 }
 
@@ -781,8 +755,11 @@ footer .logo {
 
 .footer-bottom {
       background: var(--raisin-black-2);
+      font-family: var(--ff-jost);
       padding-block: 20px;
       text-align: center;
+      font-size: var(--fs-7);
+      opacity: 0.7;
 }
 
 .copyright a {
@@ -795,24 +772,13 @@ footer .logo {
       color: var(--white);
 }
 
-
-
-
-
-/*-----------------------------------*\
-      #MEDIA QUERIES
-    \*-----------------------------------*/
-
-/**
-     * responsive for larger than 450px screen
-     */
-
+/* 
+  Media Queries
+          */
+/* I. Screens Larger than 450px */
 @media (min-width: 450px) {
 
-      /**
-       * HERO
-       */
-
+      /* Hero Section */
       .hero-form {
             position: relative;
       }
@@ -820,6 +786,7 @@ footer .logo {
       .email-field {
             margin-bottom: 0;
             padding-right: 155px;
+            border: 2.4px solid #DFDFDE;
       }
 
       .hero .btn-primary {
@@ -829,12 +796,7 @@ footer .logo {
             padding-block: 12.5px;
       }
 
-
-
-      /**
-       * ABOUT
-       */
-
+      /* About */
       .about-card .card-text {
             max-width: 300px;
             margin-inline: auto;
@@ -842,36 +804,15 @@ footer .logo {
 
 }
 
-
-
-
-
-/**
-     * responsive for larger than 576px screen
-     */
-
+/* II. For Screens larger than 576px */
 @media (min-width: 576px) {
-
-      /**
-       * CUSTOM PROPERTY
-       */
+      /* Custom Property */
 
       :root {
-
-            /**
-         * typography
-         */
-
             --fs-1: 52px;
-
       }
 
-
-
-      /**
-       * REUSED STYLE
-       */
-
+      /* Re-Used Styles */
       .container {
             max-width: 525px;
             margin-inline: auto;
@@ -885,20 +826,10 @@ footer .logo {
 
 }
 
-
-
-
-
-/**
-     * responsive for larger than 768px screen
-     */
-
+/* III. For Screens larger than 768px */
 @media (min-width: 768px) {
 
-      /**
-       * REUSED STYLE
-       */
-
+      /* Re-Used Styles */
       .container {
             max-width: 720px;
       }
@@ -907,12 +838,7 @@ footer .logo {
             max-width: 645px;
       }
 
-
-
-      /**
-       * HERO
-       */
-
+      /* Hero Section */
       .hero :is(.hero-text, .form-text, .hero-form) {
             max-width: 520px;
       }
@@ -922,22 +848,12 @@ footer .logo {
             margin-inline: auto;
       }
 
-
-
-      /**
-       * ABOUT
-       */
-
+      /* About */
       .about-list {
             grid-template-columns: 1fr 1fr;
       }
 
-
-
-      /**
-       * CONTACT
-       */
-
+      /* Contact */
       .contact-form .wrapper-flex {
             display: flex;
             gap: 30px;
@@ -947,32 +863,17 @@ footer .logo {
             width: 50%;
       }
 
-
-
-      /**
-       * FOOTER
-       */
-
+      /* Footer */
       .footer-link-box {
             grid-template-columns: repeat(3, 1fr);
       }
 
 }
 
-
-
-
-
-/**
-     * responsive for larger than 992px screen
-     */
-
+/* IV. For Screens larger than 992px */
 @media (min-width: 992px) {
 
-      /**
-       * REUSED STYLE
-       */
-
+      /* Re-Used Styles */
       .container {
             max-width: 950px;
       }
@@ -981,12 +882,7 @@ footer .logo {
             max-width: 450px;
       }
 
-
-
-      /**
-       * HEADER
-       */
-
+      /* Header */
       .header {
             overflow: visible;
             padding-block: 0;
@@ -1029,14 +925,10 @@ footer .logo {
       .navbar-link,
       .header-action-link {
             padding-block: 25px;
+            font-weight: bold;
       }
 
-
-
-      /**
-       * HERO
-       */
-
+      /* Hero Section */
       .hero .container {
             display: grid;
             grid-template-columns: 4fr 5fr;
@@ -1048,12 +940,7 @@ footer .logo {
             margin-bottom: 0;
       }
 
-
-
-      /**
-       * ABOUT
-       */
-
+      /* About */
       .about .container {
             display: flex;
             align-items: center;
@@ -1074,12 +961,7 @@ footer .logo {
             transform: translateY(50px);
       }
 
-
-
-      /**
-       * FEATURES
-       */
-
+      /* Features */
       .features-wrapper {
             display: grid !important;
             grid-template-columns: 1fr 1fr;
@@ -1096,26 +978,14 @@ footer .logo {
             grid-row: 1 / 2;
       }
 
-
-
-      /**
-       * BLOG
-       */
-
-      .blog-list {
-            grid-template-columns: repeat(3, 1fr);
+      /* Testimonials */
+      .test-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
       }
 
-      .blog .section-text {
-            margin-bottom: 50px;
-      }
-
-
-
-      /**
-       * CONTACT
-       */
-
+      /* Contact */
       .contact-wrapper {
             display: grid;
             grid-template-columns: 3fr 2fr;
@@ -1127,12 +997,7 @@ footer .logo {
             margin-bottom: 0;
       }
 
-
-
-      /**
-       * FOOTER
-       */
-
+      /* Footer */
       .footer-top .container {
             display: flex;
             justify-content: space-between;
@@ -1151,40 +1016,25 @@ footer .logo {
 
 }
 
-
-
-
-
-/**
-     * responsive for larger than 1200px screen
-     */
-
+/* IV. For Screens Larger than 1200px  */
 @media (min-width: 1200px) {
 
-      /**
-       * REUSED STYLE
-       */
-
+      /* Re-Used Styles */
       .container {
             max-width: 1150px;
       }
 
+      /* Testimonial Section */
+      .test-row {
+            grid-template-columns: repeat(3, 1fr);
+      }
 
-
-      /**
-       * HERO
-       */
-
+      /* Hero Section */
       .hero .container {
             gap: 150px;
       }
 
-
-
-      /**
-       * FOOTER
-       */
-
+      /* Footer */
       .footer-link-box {
             margin-right: 40px;
       }
