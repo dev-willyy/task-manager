@@ -222,7 +222,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header.active {
-      height: 330px;
+      height: 340px;
 }
 
 .header .container {
@@ -501,37 +501,24 @@ html::-webkit-scrollbar-thumb:hover {
       gap: 10px;
 }
 
-/* Testimonials Section */
+
+/* Testimonial Section */
 #testimonials {
       background-color: var(--ghost-white-1);
-      padding-inline: 6.24rem;
+      padding: 4rem 0;
 }
 
-.py-4 {
-      padding: 2rem 0;
-}
-
-.flex-container {
+.testimonial-container {
       max-width: 1320px;
       padding: 0 1rem;
       margin: 0 auto;
 }
 
-.lg-title {
-      font-size: 1.8rem;
-      line-height: 2.4;
-}
-
-.sm-title {
-      display: block;
-      font-family: var(--ff-jost);
-      font-weight: 400;
-      font-size: 1.4rem;
-      padding-bottom: .4rem;
-      max-width: 450px;
-      margin-right: auto;
-      margin-left: auto;
-      line-height: 1.1;
+.title-wrap {
+      text-align: center;
+      padding: 0.4rem 0;
+      margin-bottom: 0.2rem;
+      color: var(--independence);
 }
 
 .test-item {
@@ -576,15 +563,13 @@ html::-webkit-scrollbar-thumb:hover {
       margin: 1rem;
 }
 
-.test-item-info h3 {
-      font-size: 1rem;
+.text {
+      font-weight: 300;
+      opacity: .9;
 }
 
-.title-wrap {
-      text-align: center;
-      padding: 0.4rem 0;
-      margin-bottom: 0.2rem;
-      color: var(--independence);
+.test-item-info h3 {
+      font-size: 1rem;
 }
 
 
@@ -824,6 +809,11 @@ footer .logo {
             margin-bottom: 80px;
       }
 
+      /* Testimonials */
+      .test-row {
+            padding-inline: 7.8rem;
+      }
+
 }
 
 /* III. For Screens larger than 768px */
@@ -861,6 +851,11 @@ footer .logo {
 
       .wrapper-flex .input-wrapper {
             width: 50%;
+      }
+
+      /* Testimonials */
+      .test-row {
+            padding-inline: 7.8rem;
       }
 
       /* Footer */
@@ -983,6 +978,7 @@ footer .logo {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
+            padding-inline: 5.26rem;
       }
 
       /* Contact */
