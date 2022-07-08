@@ -263,6 +263,12 @@ html::-webkit-scrollbar-thumb:hover {
       color: var(--majorelle-blue);
 }
 
+#action-link-outline abbr {
+      color: red;
+      /* color: var(--cool-gray) !important; */
+      /* border: 2px solid var(--cool-gray); */
+}
+
 /* Styling for Hero Section */
 .hero {
       padding: 125px 0 var(--section-padding);
@@ -275,6 +281,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .hero-title {
       margin-bottom: 25px;
+      font-size: 4.4rem;
 }
 
 .hero-text {
@@ -339,6 +346,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .about-title {
       margin-bottom: 10px;
+      font-size: 36px;
 }
 
 .about-text {
@@ -416,6 +424,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .features .section-title {
       margin-bottom: 15px;
+      font-size: var(--fs-1);
 }
 
 .features .section-text {
@@ -519,6 +528,11 @@ html::-webkit-scrollbar-thumb:hover {
       padding: 0.4rem 0;
       margin-bottom: 0.2rem;
       color: var(--independence);
+      font-size: var(--fs-2);
+}
+
+.title-wrap p {
+      font-size: var(--fs-3);
 }
 
 .test-item {
@@ -582,6 +596,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 .contact .section-title {
       margin-bottom: 15px;
+      font-size: var(--fs-1);
 }
 
 .contact .section-text {
@@ -920,7 +935,23 @@ footer .logo {
       .navbar-link,
       .header-action-link {
             padding-block: 25px;
-            font-weight: bold;
+      }
+
+
+      .action-link-outline {
+            background: hsla(240, 100%, 97%, 0.955);
+      }
+
+      .action-link-outline {
+            color: var(--cool-gray);
+            font-weight: 400;
+      }
+
+      .action-link-outline:is(:hover, :focus) {
+            background: var(--majorelle-blue);
+            color: var(--ghost-white-2);
+            box-shadow: 0 3px 10px hsla(245, 67%, 59%, 0.5);
+            transform: translateY(0);
       }
 
       /* Hero Section */
