@@ -263,12 +263,6 @@ html::-webkit-scrollbar-thumb:hover {
       color: var(--majorelle-blue);
 }
 
-#action-link-outline abbr {
-      color: red;
-      /* color: var(--cool-gray) !important; */
-      /* border: 2px solid var(--cool-gray); */
-}
-
 /* Styling for Hero Section */
 .hero {
       padding: 125px 0 var(--section-padding);
@@ -532,7 +526,13 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .title-wrap p {
-      font-size: var(--fs-3);
+      font-size: 1.16rem;
+      font-family: var(--ff-jost);
+      font-weight: normal;
+      color: var(--cool-gray);
+      display: inline-block;
+      margin-top: 1rem;
+      margin-bottom: 1.8rem;
 }
 
 .test-item {
@@ -585,7 +585,6 @@ html::-webkit-scrollbar-thumb:hover {
 .test-item-info h3 {
       font-size: 1rem;
 }
-
 
 
 /* Contact Section */
@@ -775,6 +774,14 @@ footer .logo {
 /* 
   Media Queries
           */
+@media screen and (min-width: 300px) and (max-width: 992px) {
+      .action-link-outline {
+            color: var(--cool-gray);
+            margin-block: 8px !important;
+      }
+}
+
+
 /* I. Screens Larger than 450px */
 @media (min-width: 450px) {
 
@@ -939,12 +946,14 @@ footer .logo {
 
 
       .action-link-outline {
-            background: hsla(240, 100%, 97%, 0.955);
-      }
-
-      .action-link-outline {
-            color: var(--cool-gray);
+            font-size: var(--fs-6);
             font-weight: 400;
+            padding: 15px 30px;
+            border-radius: 4px;
+            color: var(--cool-gray);
+            transition: var(--transition);
+            color: var(--majorelle-blue);
+            background: hsla(240, 100%, 97%, 0.955);
       }
 
       .action-link-outline:is(:hover, :focus) {
