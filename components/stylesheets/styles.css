@@ -222,13 +222,25 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .header.active {
-      height: 340px;
+      height: 370px !important;
 }
 
 .header .container {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
+}
+
+.header .container::after {
+      content: "taskeefy";
+      position: absolute;
+      font-size: 20px;
+      top: 22px;
+      left: 50px;
+      font-weight: bold;
+      color: #3D2C8D;
+      text-shadow: .3px .3px var(--cool-gray);
 }
 
 .menu-toggle-btn {
@@ -275,7 +287,10 @@ html::-webkit-scrollbar-thumb:hover {
 
 .hero-title {
       margin-bottom: 25px;
-      font-size: 4.4rem;
+      font-size: 3.2rem;
+      font-family: var(--ff-jost);
+      letter-spacing: -2.1px;
+      text-shadow: .2px .2px black;
 }
 
 .hero-text {
@@ -700,7 +715,10 @@ footer .logo {
 
 .page-brand {
       border-radius: 0.5rem;
+      margin-right: 6rem;
 }
+
+
 
 .footer-text {
       font-size: var(--fs-6);
@@ -774,7 +792,17 @@ footer .logo {
 /* 
   Media Queries
           */
+@media screen and (min-width: 1115px) and (max-width: 1199px) {
+      .testimonial-container {
+            max-width: 1060px;
+      }
+}
+
 @media screen and (min-width: 300px) and (max-width: 992px) {
+      .header .container::after {
+            top: -1px;
+      }
+
       .action-link-outline {
             color: var(--cool-gray);
             margin-block: 8px !important;
@@ -835,6 +863,7 @@ footer .logo {
       .test-row {
             padding-inline: 7.8rem;
       }
+
 
 }
 
