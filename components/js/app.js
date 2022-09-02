@@ -43,9 +43,7 @@ function showTodo(filter) {
     !checkTask.length
         ? clearAll.classList.remove("active")
         : clearAll.classList.add("active");
-    taskBox.offsetHeight >= 300
-        ? taskBox.classList.add("overflow")
-        : taskBox.classList.remove("overflow");
+    taskBox.offsetHeight >= 300 && taskBox.classList.add("overflow");
 }
 showTodo("all");
 
