@@ -1013,6 +1013,7 @@ footer .logo {
 
       .about-content {
             margin-bottom: 0;
+            transform: translateY(-82px);
             width: 40%;
       }
 
@@ -1021,8 +1022,8 @@ footer .logo {
             padding-bottom: 50px;
       }
 
-      .about-list li:nth-child(odd) {
-            transform: translateY(50px);
+      .about-list li {
+            transform: translateY(30px);
       }
 
       /* Features */
