@@ -33,7 +33,7 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-image: url("/assets/images/todo-bg.jpg");
@@ -71,7 +71,7 @@ body {
 
 @media only screen and (max-width: 720px) {
   .wrapper {
-    margin-top: 120px;
+    margin-top: 130px;
   }
 }
 
@@ -170,7 +170,7 @@ li {
 
 .task-box.overflow {
   overflow: auto;
-  max-height: 150px;
+  max-height: 20vh;
 }
 
 .task-box::-webkit-scrollbar {
