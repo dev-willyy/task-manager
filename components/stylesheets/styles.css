@@ -974,13 +974,26 @@ footer .logo {
             padding-block: 25px;
       }
 
-
-      .target-list {
+      /* Checking with DOM Elements */
+      .targeted_list_item {
             position: relative;
       }
 
-      .target-link::after {
-            content: "Click here to open up our Productivity App";
+      .modal_on_link::before {
+            content: "";
+            position: absolute;
+            top: -25%;
+            left: 48%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid hsl(245, 95%, 76%);
+            transition: opacity .3s ease-in;
+      }
+
+      .modal_on_link {
             font-family: var(--ff-poppins);
             font-size: 14px;
             font-weight: var(--fw-500);
@@ -994,27 +1007,12 @@ footer .logo {
             left: -50%;
             border-radius: .5rem;
             padding: 8px 4px 8px 8px;
-            transition: all .3s ease-in;
+            z-index: -11;
+            transition: opacity .3s ease-in;
             opacity: 0;
       }
 
-      .target-link::before {
-            content: "";
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 20px solid hsl(245, 95%, 76%);
-            transition: all .3s ease-in;
-            opacity: 0;
-      }
-
-      .target-list:hover .target-link::after,
-      .target-list:hover .target-link::before {
+      .targeted_link:hover + .modal_on_link {
             opacity: 1;
       }
 
