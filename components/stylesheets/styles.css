@@ -1125,7 +1125,7 @@ footer .logo {
 }
 
 /* IV. For Screens Larger than 1200px  */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 
       /* Re-Used Styles */
       .container {
@@ -1151,4 +1151,13 @@ footer .logo {
             width: 170px;
       }
 
+}
+
+@media screen and (max-width: 991px) {
+
+      .before_pseudoelement,
+      .modal_on_link {
+            display: none;
+            visibility: hidden;
+      }
 }
