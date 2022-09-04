@@ -169,7 +169,8 @@ html::-webkit-scrollbar-thumb:hover {
       color: var(--white);
 }
 
-.btn-primary:is(:hover, :focus) {
+.btn-primary:is(:hover, :focus),
+.btn-secondary:is(:hover, :focus) {
       --majorelle-blue: hsl(245, 67%, 55%);
       box-shadow: 0 3px 10px hsla(245, 67%, 59%, 0.5);
 }
@@ -372,7 +373,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .about-card {
-      padding: 20px;
+      padding: 28px 20px 20px;
       text-align: center;
       box-shadow: 0 3px 12px hsla(233, 77%, 10%, 0.06);
       border-radius: 4px;
@@ -420,6 +421,7 @@ html::-webkit-scrollbar-thumb:hover {
       font-weight: var(--fw-500);
       line-height: 1.8;
       transition: var(--transition);
+      display: inline-block;
 }
 
 .about-card:hover .card-text {
@@ -1065,7 +1067,7 @@ footer .logo {
       }
 
       .about-list li {
-            transform: translateY(30px);
+            transform: translateY(32px);
       }
 
       /* Features */
@@ -1155,8 +1157,8 @@ footer .logo {
 
 @media screen and (max-width: 991px) {
 
-      .before_pseudoelement,
       .modal_on_link {
+
             display: none;
             visibility: hidden;
       }
