@@ -84,7 +84,7 @@ textarea {
 
 html {
     font-family: var(--ff-poppins);
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 body {
@@ -98,7 +98,7 @@ body {
 html {
     scrollbar-width: normal;
     scrollbar-color: #98acf8 #3d2c8d;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 /* For chrome and related browsers */
@@ -450,6 +450,10 @@ html::-webkit-scrollbar-thumb:hover {
     margin-bottom: 35px;
 }
 
+.second-banner {
+    margin-top: 55px;
+}
+
 .features-banner img {
     width: 100%;
 }
@@ -534,7 +538,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .title-wrap {
-    margin-bottom: 1rem;
+    margin-block: 1.2rem;
 }
 
 .title-wrap h2 {
@@ -600,6 +604,10 @@ html::-webkit-scrollbar-thumb:hover {
 .text {
     font-weight: 300;
     opacity: 0.9;
+}
+
+.text.bullet-point {
+    white-space: nowrap;
 }
 
 .test-item-info h3 {
@@ -809,6 +817,7 @@ a.inactive {
 @media screen and (min-width: 1115px) and (max-width: 1199px) {
     .testimonial-container {
         max-width: 1060px;
+        max-width: fit-content;
     }
 }
 
@@ -820,6 +829,24 @@ a.inactive {
     .action-link-outline {
         color: var(--cool-gray);
         margin-block: 8px !important;
+    }
+}
+
+@media screen and (min-width: 150px) and (max-width: 991px) {
+    #testimonials {
+        padding-block: 10px !important;
+    }
+
+    .test-row {
+        padding-block: 0 3rem;
+    }
+
+    .middle-test-item {
+        transform: translateY(20px) !important;
+    }
+
+    .third-test-item {
+        transform: translateY(40px) !important;
     }
 }
 
