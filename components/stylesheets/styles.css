@@ -668,6 +668,11 @@ textarea.input-field {
     --ionicon-stroke-width: 40px;
 }
 
+.contact-list * {
+    font-family: "Jost", sans-serif;
+    font-size: 17px;
+}
+
 .contact-list li:not(:last-child) {
     margin-bottom: 25px;
 }
@@ -777,7 +782,8 @@ footer .logo {
     opacity: 0.7;
 }
 
-.copyright a {
+.copyright a,
+a.adjacent-tag {
     display: inline-block;
     color: var(--white-opacity);
     transition: var(--transition);
@@ -785,6 +791,10 @@ footer .logo {
 
 .copyright a:is(:hover, :focus) {
     color: var(--white);
+}
+
+a.inactive {
+    cursor: unset;
 }
 
 /* 
@@ -1083,6 +1093,14 @@ footer .logo {
 
     .contact-form {
         margin-bottom: 0;
+    }
+
+    .contact-list {
+        transform: translateY(-12%);
+    }
+
+    .contact-list * {
+        font-size: 20px;
     }
 
     /* Footer */
